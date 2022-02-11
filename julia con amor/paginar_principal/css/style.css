@@ -3,11 +3,13 @@
     text-decoration: none;
     list-style: none;
 }
-
+body{
+    background-color: rgba(0, 0, 0, 0.7);
+}
 .contenedor{
- width: 412px;
  width: 100%;
- background-image: linear-gradient(180deg, #ffff31 0, #ffff2c 8.33%, #ffff2e 16.67%, #faff36 25%, #d6ff40 33.33%, #b0ff4a 41.67%, #89f253 50%, #60e35b 58.33%, #2cd563 66.67%, #00c96c 75%, #00c075 83.33%, #00b87f 91.67%, #00b289 100%);
+ margin: 0 auto;
+ background-color: #f0f0f0;
 }
 
 .contedenor__caja-vinculos{
@@ -32,19 +34,28 @@
     background-color: black;
     position: relative;
     left: 130px;
+
+    
+}
+
+.contenedor__vinculo2 {
+    color: white;
 }
 
 .contenedor__caja-interna-vinculo:hover{
-    background-color: transparent;
+    background-color: white;
 }
 
-.contenedor__vinculo2{
-    color: #fff;
-
+.contenedor__caja-interna-vinculo:hover  .contenedor__vinculo2{
+    color: black;
 }
+
+
+
+
 
 .container__logo , .logo{
-    margin: 0 auto;
+   
     width: 100px;
     height: 100px;
     position: relative;
@@ -62,50 +73,72 @@
 }
 
 .contenedor__nav{
-    width: 100%;
+    width: 75%;
+    height: 30px;
     position: absolute;
-    top: 140px;
-    padding: 10px;
-    display: flex;
-    background-color: #fff;
+    top: 100px;
+    left: 110px; 
+    display: flex;   
     z-index: 3;
 }
 
-.contenedor__nav-link{
-    margin: auto;
-    color: #000;
-}
-
-.contenedor__nav-link:hover{
-    background-color: white;
-    color: black;
-    padding: 5px;
-}
-
 .contenedor__nav-lista{
-    width: 330px;
-    height: 200px;
-    text-align: center;
-    position: absolute;
-    top: 30px;
+    width: 100%;
     margin: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
     
 }
 
-.contenedor__nav-lista a, li{
-    color: #fff;
-    margin-bottom: 20px;
+.contenedor__nav-lista-link{
+   background-color: white;
+   padding: 3px;
 }
 
+.contenedor__nav-lista-link > a:hover{
+    color: white;
+    padding: 3px;
+    display: flex;
+    vertical-align: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.contenedor__nav-lista-interna{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding: 10px;
+    top: 30px;
+    text-align: left;
+    display: none;
+}
+
+.lista__interna-link {
+  margin-bottom: 10px;
+}
+
+.lista__interna-link > a {
+    color: white;
+}
+
+.lista__interna-link > a:hover{
+    background-color: white;
+    padding: 5px;
+    color: black;
+}
+
+
+.despliegue:hover .contenedor__nav-lista-interna{
+  display: block;
+  position: absolute;
+
+}
 
 
 .contenedor__caja-donar{
     position: absolute;
-    top: 350px;
+    top: 280px;
     width: 300px;
     color: #fff;
     z-index: 5;
@@ -151,7 +184,7 @@
 
 div#slider { 
     overflow: hidden; 
-
+    
     
 } /* las imágenes no van a salir del márgen de la pantalla*/
 
@@ -240,34 +273,72 @@ div:hover span{
     padding-bottom: 5px;
 }
 
-.contenedor__footer{
+footer{
+    
+    position: relative;
+    top: 130px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     background-color: #000;
-    color: #fff;
-    display: flex;
+    color: orange;
 }
 
+footer > div{
+   
+    text-align: center;
 
+}
 
-.contenedor__footer-redes > h3 , .redes{
-    margin: 10px 0 0 10px;
+.contenedor__footer-redes .redes{
     padding: 0;
-    
 }
-.redes > li {
-    margin-bottom: 20px;
-} 
 
-.redes > li a{
-    margin-left: 8px;
-    color: #fff;
-    
+.redes li {
+  width: 150px;  
+  margin: 30px auto;
+  
+}
+
+.redes li a{
+   position: relative;
+   bottom: 8px;
+   margin-left: 1em;
+   color: orange;
+   
+}
+.redes li .img3{
+    transform: translateX(-10px);
+}
+
+.contenedor__footer-ubicacion p{
+    margin-top: 2em;
+}
+
+.contenedor__footer-ubicacion #home{
+    margin-top: 30px;
+}
+
+
+
+.contenedor__footer-colaboracion .footer--p{
+    margin-top: 7em;
+}
+  
+.twitter__a{
+    margin-right: 20px;
 }
 
 
 
 @media screen and (min-width:800px) {
+
+    .contenedor{
+        width: 90%;
+        margin: 0 auto;
+    }
     .contenedor__caja-interna-vinculo{
-        left: 970px;
+        left: 820px;
     }
 
     .container__logo , .logo{
@@ -283,14 +354,32 @@ div:hover span{
         width: 30%;
         height: 60px;
         position: relative;
-        top: 5px;
+        top: 20px;
         justify-content: flex-end;
-        left: 750px;
+        left: 620px;
         background: none;
     }
 
-    .contenedor__nav-link{
-        color: #fff;
+    .contenedor__nav-lista{
+        height: 30px;
+    }
+
+    .contenedor__nav-lista-link{
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        background-color: transparent;
+
+    }
+
+    .contenedor__nav-lista-link > a{
+        color: white;
+    }
+
+
+    .contenedor__nav-lista-interna{
+        top: 30px;
+        
     }
 
     .contenedor__header{
@@ -300,9 +389,9 @@ div:hover span{
     }
 
     div#slider{
-        width: 70%;
+        width: 90%;
+        height: 500px;
         margin: 10px auto;
-
         box-shadow: 10px 10px 15px ;
     }
 
@@ -312,7 +401,8 @@ div:hover span{
 
 
     .contenedor__caja-donar{
-    top: 530px;
+    top: 510px;
+    left: 150px;
     }
 
     .contenedor__caja-donar h1{
@@ -367,38 +457,45 @@ div:hover span{
 
 }
 .contenedor__footer-redes > h3{ 
+    display: block;
     margin-bottom: 20px;  
     font-size: 25px;
     color: white;
+
     
 }
 .contenedor__footer-redes li{
-    margin: 10px 5px 40px 10px;
+    margin: 20px;
     
 }
+
+.redes li{
+    
+    display: flex;
+}
 .contenedor__footer-redes li > img{
-   margin-left: 40px;
+   margin: 0 0 20px 40px;
 
 }
 
 .contenedor__footer-redes  li a{
     font-size: 20px;
     color: orange;
-    position: relative;
-    left: 10px;
-    bottom: 10px;
-}
+    margin-top: 10px;
+    
+    }
 
 .contenedor__footer-ubicacion{
-    width: 20%;
+    width: 200px;
     height: 250px;
     position: relative;
-    top: 15px;
-    left: 260px;
+    top: 25px;
+    left: 70px;
     
 }
 
 .contenedor__footer-ubicacion h3{
+
     font-size: 25px;
     margin: 0;
     margin-top: 8px;
@@ -407,12 +504,12 @@ div:hover span{
 }
 
 .contenedor__footer-ubicacion p{
-    margin: 20px;
+    margin-top: 20px;
     color: orange;
 }
 
 .contenedor__footer-ubicacion img{
-    margin: 40px 0 0 50px;
+    margin-top: 20px;
 }
 
 .contenedor__footer-colaboracion{
@@ -420,7 +517,8 @@ div:hover span{
     height: 300px;
     position: relative;
     text-align: center;
-    left: 380px;
+    top: 10px;
+    left: 50px;
     color: #fff;
     
     
@@ -432,7 +530,7 @@ div:hover span{
 }
 
 .contenedor__footer-colaboracion p{
-    margin-top: 100px;
+    margin-top: 80px;
     color: orange;
 }
  

@@ -197,8 +197,9 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.contenedor__formulario-2 > h3{
+.contenedor__formulario-2 .form__h3{
     font-size: 25px;
+    color: white;
 
 }
 
@@ -324,6 +325,7 @@ footer > div{
 
     .containedor__donacion > h3{
         font-size: 1.5em;
+
     }
 
     .contenedor__formulario{
@@ -361,13 +363,24 @@ footer{
 
 .contenedor{
     background-image: url(donaciones.jpg);
+    background-size: cover;
 }
 
 }
 
-.bad{
-    background-color: red;
-    font-size: 45px;
+.ok{
+    text-align: center;
+    background-color: #82E0AA;
+    position: absolute;
+    top: 830px;
+    left: 65px;
+    padding: 10px;
+}
+
+.envio{
+    font-size: 34px;
+    background-color: #82E0AA;
+    color: black;
 }
 
 

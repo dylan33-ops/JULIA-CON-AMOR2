@@ -74,13 +74,15 @@
 				<div class="contenedor__btn">
 					<button type="submit" value="Submit" name="enviar">ENVIAR</button>
 
-				 <input type="reset" id="borrar">
+				 <button type="reset" id="borrar">
+				 	 RESTABLECER
+				 </button>
 				</div>
 		    </form>
 
 
 		    <form method="post" class="contenedor__formulario-2">
-		    	<h3>¿CUANTO DESEAS DONAR?</h3>
+		    	<h3 class="form__h3">¿CUANTO DESEAS DONAR?</h3>
 
 		    	<img src="donar.png">
 
@@ -90,7 +92,7 @@
 		    		
 		    		
 		    		<div class="envio-dinero">
-                        <button type="submit">DEPOSITAR</button>
+                        <button type="submit" name="depositar">DEPOSITAR</button>
 
                     </div>
 
@@ -132,6 +134,7 @@
         <?php
 
          include("registro_donacion.php");
+         include("valor_donacion.php");
 
         ?>
 

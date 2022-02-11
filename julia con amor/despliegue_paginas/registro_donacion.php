@@ -21,7 +21,7 @@
     if ($resultado) {
       
       ?>
-        <h2 class="ok"> "REGISTRO EXITOSO</h2>
+        <h2 class="ok"> "REGISTRO EXITOSO"</h2>
       <?php
     }else{
       ?>
@@ -33,3 +33,4 @@
 
  } 
  
+?>
